@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoring Jalur Pendakian</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Dashboard Monitoring Jalur Pendakian</h1>
+    </header>
+    <main>
+        <section class="data-display">
+            <div class="data-item">
+                <h2>Suhu Udara</h2>
+                <p id="temperature">-- °C</p>
+            </div>
+            <div class="data-item">
+                <h2>Kelembapan Udara</h2>
+                <p id="humidity">-- %</p>
+            </div>
+            <div class="data-item">
+                <h2>Kecepatan Angin</h2>
+                <p id="windSpeed">-- m/s</p>
+            </div>
+            <div class="data-item status">
+                <h2>Status Keamanan</h2>
+                <p id="safetystatus">--</p>
+            </div>
+        </section>
+        <section class="chart-section">
+            <canvas id="sensorChart"></canvas>
+        </section>
+        <section class="controls">
+            <button id="downloadLog">Download Log Data</button>
+            <p id="error" class="error-message"></p>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
